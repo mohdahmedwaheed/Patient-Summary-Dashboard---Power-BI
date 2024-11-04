@@ -23,10 +23,12 @@ Final discharge outcome displayed with a summary status to facilitate follow-up 
 Data Model
 
 ## The dashboard pulls data from two interconnected tables:
+1. Patient admission information (12,244 records)
+    - Admission_No (unique identifier)
+    - Patient_Name
+      
+2. Clinical Data Dataset: This dataset contains 15,757 clinical records, each linked to a patient through the Admission_No. The dataset includes various clinical variables such as medical history (e.g., Diabetes, Hypertension), lab results (e.g., BNP, Creatine), and treatment outcomes (e.g., Discharge_Date, Outcome).
 
-Patient Demographics Table: Includes columns like Admission No, Patient Name, Age, Gender, ICU Duration, Alcohol/Smoking status, and other demographic details. (~12,244 rows)
-
-Patient Health Metrics Table: Contains a wide range of health-related metrics, including Admission Date, Discharge Date, various medical conditions, lab results (e.g., glucose, HB, creatinine), doctor notes, and discharge outcomes. (~15,757 rows)
 
 These tables are linked using Admission Number as the primary key to create a comprehensive view of each patient’s journey and health status.
 
